@@ -1,3 +1,7 @@
 source :rubygems
-gem 'sinatra', '1.1.0'
+gem 'sinatra', '~> 1.3.4'
 gem 'thin'
+gem 'slim'
+gem 'less'
+gem 'coffee-script'
+gem 'therubyracer'
