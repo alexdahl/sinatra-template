@@ -4,6 +4,7 @@ require 'less'
 require 'coffee-script'
 require 'sinatra/partial'
 require 'rdiscount'
+require 'yaml'
 
 class App < Sinatra::Base
 
@@ -45,8 +46,10 @@ class App < Sinatra::Base
   end
 
   get '/:post', :check => :valid_key? do
-    markdown = RDiscount.new(File.read("content/#{params[:post]}.md")).to_html
+    file = "content/#{params[:post]}/#{params[:post]}"
+    markdown = RDiscount.new(File.read(file + ".md")).to_html
     slim :post, :locals => { :text => markdown }
+
   end
 
   run! if app_file == $0

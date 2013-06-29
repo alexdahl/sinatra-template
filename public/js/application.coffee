@@ -1,2 +1,2 @@
 jQuery ->
-	$('h2').text('Sinatra + Slim + LESS + CoffeeScript + Heroku')
+	$('h2').text('Sinatra + Slim + LESS + CoffeeScript + Markdown + YAML + Heroku')
