@@ -2,10 +2,15 @@ require 'sinatra/base'
 require 'slim'
 require 'less'
 require 'coffee-script'
+require 'sinatra/partial'
 
 class App < Sinatra::Base
 
-	Slim::Engine.set_default_options :pretty => true
+  configure do
+    Slim::Engine.set_default_options :pretty => true
+    register Sinatra::Partial
+    set :partial_template_engine, :slim
+  end
 
 	register do
 		def check (name)

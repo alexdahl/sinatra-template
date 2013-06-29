@@ -1,11 +1,9 @@
 doctype html
 html
-  head
-    title Sinatra Template
-    link rel="stylesheet" type="text/css" href="/css/application.css"
-    script type='text/javascript' src='/js/jquery-1.9.0.min.js'
-    script type='text/javascript' src='/js/application.js'
 
-  body
-    h1 Hello World
-    h2
+== partial :header, :locals => {title: "Sinatra Template", jquery: true}
+
+body
+  h1 Hello World
+  h2
+  
