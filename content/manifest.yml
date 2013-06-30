@@ -1,0 +1,14 @@
+posts:
+  -
+    slug:         alpha
+    title:        Alpha
+    description:  This is a description.
+    categories:
+      - lorem
+      - ipsum
+      - dolor
+  -
+    slug:         beta
+    title:        Beta
+    categories:
+      - amet

@@ -7,11 +7,9 @@ html
     h1 Hello World
     h2
 
-    - posts = ['alpha', 'beta']
-    - posts.each do |slug|
-      p
-        - meta = YAML.load_file("content/#{slug}/#{slug}.yml")
-        - link = slug + "?key=1234"
-        a href=link = meta['title']
-        br
-        = meta['categories']
+    - posts = YAML.load_file("content/manifest.yml")
+    - posts['posts'].each do |post|
+      - link = post['slug'] + "?key=1234"
+      a.post href=link
+        .title= post['title']
+        .description= post['description']
