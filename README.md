@@ -10,6 +10,6 @@ A starting point for a lightweight app with:
 
 ## Usage
 
-`rackup`
+`ruby app.rb`
 
 http://localhost:4567/?key=1234
