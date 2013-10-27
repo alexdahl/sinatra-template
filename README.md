@@ -12,4 +12,4 @@ A starting point for a lightweight app with:
 
 `rackup`
 
-http://localhost:9292/?key=1234
+http://localhost:4567/?key=1234
